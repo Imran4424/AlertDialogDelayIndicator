@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D8CCB892B6AAE760053B13C /* AlertDialogDelayIndicatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CCB882B6AAE760053B13C /* AlertDialogDelayIndicatorApp.swift */; };
-		1D8CCB8B2B6AAE760053B13C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CCB8A2B6AAE760053B13C /* ContentView.swift */; };
+		1D8CCB8B2B6AAE760053B13C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CCB8A2B6AAE760053B13C /* HomeView.swift */; };
 		1D8CCB8D2B6AAE770053B13C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8CCB8C2B6AAE770053B13C /* Assets.xcassets */; };
 		1D8CCB902B6AAE770053B13C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8CCB8F2B6AAE770053B13C /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		1D8CCB852B6AAE750053B13C /* AlertDialogDelayIndicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertDialogDelayIndicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8CCB882B6AAE760053B13C /* AlertDialogDelayIndicatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogDelayIndicatorApp.swift; sourceTree = "<group>"; };
-		1D8CCB8A2B6AAE760053B13C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1D8CCB8A2B6AAE760053B13C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1D8CCB8C2B6AAE770053B13C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D8CCB8F2B6AAE770053B13C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				1D8CCB882B6AAE760053B13C /* AlertDialogDelayIndicatorApp.swift */,
-				1D8CCB8A2B6AAE760053B13C /* ContentView.swift */,
+				1D8CCB8A2B6AAE760053B13C /* HomeView.swift */,
 				1D8CCB8C2B6AAE770053B13C /* Assets.xcassets */,
 				1D8CCB8E2B6AAE770053B13C /* Preview Content */,
 			);
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D8CCB8B2B6AAE760053B13C /* ContentView.swift in Sources */,
+				1D8CCB8B2B6AAE760053B13C /* HomeView.swift in Sources */,
 				1D8CCB892B6AAE760053B13C /* AlertDialogDelayIndicatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
