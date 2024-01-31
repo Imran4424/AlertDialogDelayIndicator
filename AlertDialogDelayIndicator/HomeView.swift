@@ -30,8 +30,6 @@ struct CustomAlert<Content: View>: View {
 
 struct HomeView: View {
     @State private var showingCustomAlert = false
-    @State private var okButtonTapped = false
-    @State private var showDialog = false
     @State private var isIndicatorShowing = false
     
     var body: some View {
@@ -53,17 +51,29 @@ struct HomeView: View {
                         .font(.body)
                         .padding(.bottom, 16)
                     
-                    HStack(spacing: 20) {
+                    Spacer()
+                    
+                    HStack {
                         Button("Cancel") {
                             showingCustomAlert = false
                         }
+                        .frame(maxWidth: .infinity, minHeight: 40)
                         .foregroundColor(.red)
                         
-                        Button("OK") {
+                        Button {
+                            isIndicatorShowing = true
                             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                                 showingCustomAlert = false
                             }
+                        } label: {
+                            if isIndicatorShowing {
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle())
+                            } else {
+                                Text("OK")
+                            }
                         }
+                        .frame(maxWidth: .infinity, minHeight: 40)
                         .foregroundColor(.blue)
                     }
                 }
