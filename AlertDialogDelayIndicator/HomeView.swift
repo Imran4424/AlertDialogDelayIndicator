@@ -18,7 +18,7 @@ struct CustomAlert<Content: View>: View {
                     .edgesIgnoringSafeArea(.all)
                 
                 content()
-                    .frame(width: 300, height: 200)
+                    .frame(width: 300, height: 150)
                     .background(Color.white)
                     .cornerRadius(12)
                     .shadow(radius: 5)
@@ -31,6 +31,7 @@ struct CustomAlert<Content: View>: View {
 struct HomeView: View {
     @State private var showingCustomAlert = false
     @State private var isIndicatorShowing = false
+    @State private var showModal = false
     
     var body: some View {
         VStack {
@@ -43,11 +44,11 @@ struct HomeView: View {
         .overlay(
             CustomAlert(isPresented: $showingCustomAlert) {
                 VStack {
-                    Text("Alert Title")
+                    Text("Next View")
                         .font(.headline)
                         .padding(.bottom, 8)
                     
-                    Text("Alert Message")
+                    Text("Go to Next View")
                         .font(.body)
                         .padding(.bottom, 16)
                     
@@ -64,6 +65,7 @@ struct HomeView: View {
                             isIndicatorShowing = true
                             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                                 showingCustomAlert = false
+                                showModal.toggle()
                             }
                         } label: {
                             if isIndicatorShowing {
@@ -77,7 +79,7 @@ struct HomeView: View {
                         .foregroundColor(.blue)
                     }
                 }
-                .frame(width: 300, height: 200)
+                .frame(width: 300, height: 150)
                 .padding()
                 .background(Color.white)
                 .cornerRadius(12)
@@ -85,6 +87,9 @@ struct HomeView: View {
             }
         )
         .padding()
+        .sheet(isPresented: $showModal) {
+            NextView()
+        }
     }
 }
 
